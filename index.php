@@ -98,4 +98,8 @@ echo '<br>';
 
 $bike -> switchOff();
 
+echo '<br>';
 
+
+require_once 'speedometer.php';
+echo Speedometer::convertKmToMiles(10);
