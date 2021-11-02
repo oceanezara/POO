@@ -1,6 +1,7 @@
 <?php
     require_once 'vehicle.php';
-    class Car extends Vehicle
+    require_once 'lightableInterface.php';
+    class Car extends Vehicle implements LightableInterface
     {
         
 
@@ -116,6 +117,14 @@
          }
 
 
+        }
+
+        public function switchOn(){
+
+            echo "true";
+        }
+        public function switchOff(){
+            echo "false";
         }
 
     }

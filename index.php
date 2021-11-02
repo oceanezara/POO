@@ -73,3 +73,29 @@ catch (Exception $e){
 finally {
     echo " Ma voiture roule comme un donut";
 }
+
+require_once 'lightableInterface.php';
+
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
+
+$car -> switchOn(); 
+echo '<br/>';
+
+$car -> switchOff();
+
+echo '<br>';
+$bike -> setCurrentSpeed(25);
+
+$bike -> switchOn(); 
+
+echo '<br>';
+$bike -> setCurrentSpeed(5);
+$bike -> switchOn(); 
+
+echo '<br>';
+
+$bike -> switchOff();
+
+
