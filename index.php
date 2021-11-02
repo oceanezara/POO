@@ -68,8 +68,8 @@ try {
     $car ->start();
 }
 catch (Exception $e){
-    echo "Exception received : " . $e;
+    echo "Exception received : " . $e->getMessage();
 }
 finally {
-    echo "Ma voiture roule comme un donut";
+    echo " Ma voiture roule comme un donut";
 }
