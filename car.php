@@ -6,6 +6,7 @@
 
         private string $energy;
         private int $energyLevel;
+        private bool $hasParkBrake;
 
         public function __construct(string $color, int $nbSeats, string $energy)
         {
@@ -97,10 +98,24 @@
         return $sentence;
         }
 
-        public function start(): string 
+        public function getParkBrake():bool
         {
-            $this -> currentSpeed = 0;
-            return "Start !";
+            return $this -> hasParkBrake;
+        }
+        public function setParkBrake (bool $hasParkBrake): void
+        {
+            $this->hasParkBrake = $hasParkBrake;
+            
+        }
+
+        public function start()
+        {
+            
+            if($this->hasParkBrake==true) {
+            throw new Exception("Le frein à main est actif");
+         }
+
 
         }
+
     }
